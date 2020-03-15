@@ -1,3 +1,7 @@
+interface HttpException extends Error {
+  status: number;
+}
+
 type Status = 'Scheduled' | 'Delivering' | 'Ended';
 
 interface TargetAudience {
@@ -50,6 +54,11 @@ interface Campaign {
   status: Status;
   platforms: Platforms;
 }
+
+type CampaignSummary = Pick<
+  Campaign,
+  'id' | 'name' | 'goal' | 'total_budget' | 'status'
+>;
 
 interface Schema {
   campaigns: Campaign[];
