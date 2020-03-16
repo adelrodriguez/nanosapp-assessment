@@ -3,7 +3,7 @@ import app from '../app';
 import { normalizePort } from '../utils';
 
 // Get port from environment and store it in Express
-const PORT = normalizePort(process.env.PORT || '3000');
+const PORT = normalizePort(process.env.PORT || '5000');
 app.set('port', PORT);
 
 // Create the HTTP server
