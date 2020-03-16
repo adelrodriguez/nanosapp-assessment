@@ -1,5 +1,6 @@
 import express, { Request, Response, NextFunction } from 'express';
 import logger from 'morgan';
+import path from 'path';
 import createError from 'http-errors';
 import { setupDatabase } from './scripts';
 import { indexRouter, campaignsRouter } from './routes'
@@ -9,6 +10,7 @@ const app = express();
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
+app.use(express.static(path.join(__dirname, 'public')));
 
 // Sets up the Lowdb database
 const db = setupDatabase();
