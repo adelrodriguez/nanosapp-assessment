@@ -1,17 +1,27 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { ThemeProvider, makeStyles } from '@material-ui/core/styles';
+import { theme } from './config';
+import CampaignsTable from './components/CampaignsTable';
+import 'typeface-roboto';
+
+const useStyles = makeStyles(theme => ({
+  root: {
+    margin: theme.spacing(2),
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+}));
 
 function App() {
+  const classes = useStyles();
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-      </header>
-    </div>
+    <ThemeProvider theme={theme}>
+      <div className={classes.root}>
+        <CampaignsTable />
+      </div>
+    </ThemeProvider>
   );
 }
 
