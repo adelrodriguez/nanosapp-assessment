@@ -9,6 +9,7 @@ import {
 } from '@material-ui/core';
 import Image from 'material-ui-image';
 import { makeStyles } from '@material-ui/core/styles';
+import { getImage } from '../../utils/getImage';
 
 interface Props {
   creatives: Creatives;
@@ -83,7 +84,7 @@ export function CreativesCard({ creatives }: Props) {
               Image
             </InputLabel>
             <Image
-              src={creatives.image}
+              src={getImage(creatives.image)}
               style={{ height: 200, paddingTop: 0 }}
               imageStyle={{
                 maxWidth: '100%',

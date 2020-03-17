@@ -13,6 +13,7 @@ import AttachMoney from '@material-ui/icons/AttachMoney';
 import moment from 'moment';
 import { makeStyles } from '@material-ui/core/styles';
 import { PlatformDetailsDrawer } from '../PlatformDetailsDrawer';
+import { currency } from '../../utils/currency';
 
 interface Props {
   name: string;
@@ -61,7 +62,7 @@ export function PlatformCard({ name, platform }: Props) {
             </Grid>
             <Grid item>
               <TextField
-                value={platform.total_budget}
+                value={currency(platform.total_budget)}
                 type="number"
                 InputProps={{
                   readOnly: true,

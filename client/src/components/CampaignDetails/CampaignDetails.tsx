@@ -10,6 +10,7 @@ import {
 import { Skeleton } from '@material-ui/lab';
 import AttachMoney from '@material-ui/icons/AttachMoney';
 import { PlatformCard } from '../PlatformCard';
+import { currency } from '../../utils';
 
 interface Props {
   campaign: Campaign | undefined;
@@ -113,7 +114,7 @@ export function CampaignDetails({ campaign, loading }: Props) {
         </Grid>
         <Grid item>
           <TextField
-            value={campaign.total_budget}
+            value={currency(campaign.total_budget)}
             type="number"
             InputProps={{
               readOnly: true,
