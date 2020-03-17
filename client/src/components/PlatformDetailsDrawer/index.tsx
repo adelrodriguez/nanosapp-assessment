@@ -1,0 +1,1 @@
+export { PlatformDetailsDrawer } from './PlatformDetailsDrawer';
