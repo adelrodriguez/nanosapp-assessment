@@ -1,9 +1,5 @@
 export function currency(value: number) {
-  if (navigator) {
-    const lang = navigator.language;
-
-    return `$${value.toLocaleString(lang)}`;
-  }
-
-  return value;
+  return (Math.round(value * 100) / 100)
+    .toFixed(2)
+    .replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ',');
 }

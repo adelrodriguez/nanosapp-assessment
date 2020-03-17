@@ -37,7 +37,8 @@ const columns = [
   {
     title: 'Total Budget',
     field: 'total_budget',
-    render: ({ total_budget }: CampaignSummary) => currency(total_budget),
+    render: ({ total_budget }: CampaignSummary) =>
+      `$ ${currency(total_budget)}`,
   },
   { title: 'Status', field: 'status' },
 ];
