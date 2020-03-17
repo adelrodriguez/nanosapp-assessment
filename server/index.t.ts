@@ -6,7 +6,7 @@ type Status = 'Scheduled' | 'Delivering' | 'Ended';
 
 interface TargetAudience {
   languages: string[];
-  gender: string[];
+  genders: string[];
   age_range: [number, number];
   locations: string[];
   interests: string[];
@@ -40,10 +40,10 @@ interface Platform {
   insights: Insights;
 }
 
-type PlatformsKeys = 'instagram' | 'facebook' | 'google';
+type PlatformKey = 'instagram' | 'facebook' | 'google';
 
 type Platforms = {
-  [key in PlatformsKeys]: Platform;
+  [key in PlatformKey]: Platform;
 };
 
 interface Campaign {
