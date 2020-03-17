@@ -1,8 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { ThemeProvider, makeStyles } from '@material-ui/core/styles';
-import { theme } from './config';
-import CampaignsTable from './components/CampaignsTable';
+import { Alert } from '@material-ui/lab';
 import 'typeface-roboto';
+import { theme } from './config';
+import AlertContext from './contexts/Alert';
+import CampaignsTable from './components/CampaignsTable';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -14,13 +16,17 @@ const useStyles = makeStyles(theme => ({
 }));
 
 function App() {
+  const [error, setError] = useState('');
   const classes = useStyles();
 
   return (
     <ThemeProvider theme={theme}>
-      <div className={classes.root}>
-        <CampaignsTable />
-      </div>
+      <AlertContext.Provider value={{ error, setError }}>
+        {error && <Alert severity="error">{error}</Alert>}
+        <div className={classes.root}>
+          <CampaignsTable />
+        </div>
+      </AlertContext.Provider>
     </ThemeProvider>
   );
 }
