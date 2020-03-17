@@ -9,6 +9,6 @@ export function mockInsights(): Insights {
     cost_per_click: faker.random.number(),
     click_through_rate: faker.random.number(),
     advanced_kpi_1: faker.random.number(),
-    advanced_kpi_2: faker.random.number()
+    advanced_kpi_2: faker.random.number(),
   };
 }

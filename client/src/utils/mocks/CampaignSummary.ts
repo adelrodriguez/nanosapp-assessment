@@ -8,6 +8,6 @@ export function mockCampaignSummary(count = 1): CampaignSummary[] {
       name: faker.lorem.sentence(),
       goal: faker.lorem.sentence(),
       total_budget: +faker.finance.amount(100, 100000, 2),
-      status: faker.random.arrayElement(['Scheduled', 'Delivering', 'Ended'])
+      status: faker.random.arrayElement(['Scheduled', 'Delivering', 'Ended']),
     }));
 }

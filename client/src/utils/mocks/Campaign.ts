@@ -1,5 +1,5 @@
 import faker from 'faker';
-import { mockPlatform } from './Platform';
+import { mockPlatform } from '.';
 
 export function mockCampaign(): Campaign {
   return {
