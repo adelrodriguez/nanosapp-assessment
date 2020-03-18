@@ -7,7 +7,7 @@
     "clean": "npx rimraf ./build/ && npx rimraf ./log/",
     "prebuild": "npm run clean",
     "build": "tsc && copyfiles public/**/* build",
-    "start": "npm run build && pm2 start build/bin/www.js",
+    "start": "pm2 start build/bin/www.js",
     "dev": "tsnd --respawn ./bin/www.ts",
     "test": "jest",
     "test:watch": "jest --watchAll",
