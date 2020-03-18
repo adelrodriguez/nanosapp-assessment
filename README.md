@@ -44,7 +44,7 @@ npm run dev
 
 This will run the API in development mode at `http://localhost:5000/`
 
-## Running the client
+### Running the client
 
 To run the client application, open a new Terminal window and type:
 
@@ -55,3 +55,9 @@ npm run start
 
 This will run the clinet application in development mode at `http://localhost:3000/`
 
+## More Information
+
+See detailed choices of technologies used for both applications here:
+
+* [Server](/server/README.md)
+* [Client](/client/README.md)
