@@ -17,7 +17,7 @@ interface Props {
 const useStyles = makeStyles(theme => ({
   root: {
     minWidth: 275,
-    maxWidth: 500,
+    maxWidth: 300,
   },
   title: {
     fontSize: 14,

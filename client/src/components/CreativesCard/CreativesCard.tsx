@@ -63,6 +63,7 @@ export function CreativesCard({ creatives }: Props) {
               label="Description"
               variant="outlined"
               size="small"
+              multiline
               fullWidth
             />
           </Grid>
