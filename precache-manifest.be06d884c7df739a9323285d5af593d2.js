@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "8a60992a1eb811638c1f70f877dba657",
+    "revision": "d40268da2400fca7542d0938d8a5d9bd",
     "url": "/nanosapp-assessment/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/nanosapp-assessment/static/css/2.15b4fc73.chunk.css"
   },
   {
-    "revision": "8d9f7291b15fd90d7914",
+    "revision": "a1d5a04611dae2a8cbe6",
     "url": "/nanosapp-assessment/static/css/main.98f02dd8.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/nanosapp-assessment/static/js/2.ac885913.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "8d9f7291b15fd90d7914",
-    "url": "/nanosapp-assessment/static/js/main.1855a6de.chunk.js"
+    "revision": "a1d5a04611dae2a8cbe6",
+    "url": "/nanosapp-assessment/static/js/main.6cbc8214.chunk.js"
   },
   {
     "revision": "039644d9ff574504f052",
