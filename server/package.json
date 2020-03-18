@@ -4,6 +4,10 @@
   "description": "A simple API to provide information on advertising campaigns",
   "main": "app.ts",
   "scripts": {
+    "clean": "npx rimraf ./build/ && npx rimraf ./log/",
+    "prebuild": "npm run clean",
+    "build": "tsc && copyfiles public/**/* build",
+    "start": "npm run build && pm2 start build/bin/www.js",
     "dev": "tsnd --respawn ./bin/www.ts",
     "test": "jest",
     "test:watch": "jest --watchAll",
@@ -12,6 +16,7 @@
   "author": "Adel Rodriguez",
   "license": "ISC",
   "dependencies": {
+    "copyfiles": "^2.2.0",
     "cors": "^2.8.5",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
@@ -19,6 +24,7 @@
     "lodash": "^4.17.15",
     "lowdb": "^1.0.0",
     "morgan": "^1.9.1",
+    "pm2": "^4.2.3",
     "ts-jest": "^25.2.1",
     "ts-node-dev": "^1.0.0-pre.44",
     "typescript": "^3.8.3"
@@ -36,5 +42,8 @@
     "eslint": "^6.8.0",
     "eslint-plugin-jest": "^23.8.2",
     "jest": "^25.1.0"
+  },
+  "engines": {
+    "node": "12.16.x"
   }
 }

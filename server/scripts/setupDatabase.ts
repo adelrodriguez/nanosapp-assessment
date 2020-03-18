@@ -1,7 +1,7 @@
 import fs from 'fs';
-import path from 'path';
 import low, { LowdbSync } from 'lowdb';
 import FileSync from 'lowdb/adapters/FileSync';
+import data from '../data/data.json';
 
 // Sets up the lowdb database
 export function setupDatabase(): LowdbSync<Schema> {
@@ -11,11 +11,6 @@ export function setupDatabase(): LowdbSync<Schema> {
   // Setup the database
   const adapter = new FileSync<Schema>('db.json');
   const db = low(adapter);
-  
-  // Load data into the database
-  const data = JSON.parse(
-    fs.readFileSync(path.join(__dirname, '../data/data.json'), 'utf8')
-  );
 
   // Load campaigns as default data on the db
   db.defaults({ campaigns: data }).write();
